@@ -138,9 +138,11 @@
   });
 
   /**
-   * Initiate Pure Counter
+   * Initiate Pure Counter (only if library is present)
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
 
   /**
    * Init swiper sliders
@@ -195,10 +197,12 @@
   });
 
   /**
-   * Initiate glightbox
+   * Initiate glightbox (only if library is present)
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
 })();
