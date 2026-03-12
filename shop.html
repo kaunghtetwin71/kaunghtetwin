@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Template Shop | Kaung Htet Win (Zhang) | HTML, WordPress & Shopify Templates</title>
+  <meta name="description" content="Premium HTML, WordPress, and Shopify templates by Zhang. Professional, production-ready templates built for performance and conversions.">
+  <meta name="keywords" content="html templates, wordpress themes, shopify themes, web templates for sale, buy website template">
+  <meta name="author" content="Kaung Htet Win (Zhang)">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Template Shop - Zhang">
+  <meta property="og:description" content="Premium HTML, WordPress & Shopify templates. Production-ready, fully documented, developer-built.">
+  <meta property="og:image" content="https://codebyzhang.com/assets/img/profile/profile.webp">
+  <meta property="og:url" content="https://codebyzhang.com/shop.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* =============================================
+       SHOP PAGE STYLES
+    ============================================= */
+
+    /* Hero */
+    .shop-hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 88%) 100%);
+      border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+    .shop-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 85%);
+      color: var(--accent-color);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--nav-font);
+      margin-bottom: 20px;
+    }
+    .shop-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+    .shop-hero h1 .highlight { color: var(--accent-color); }
+    .shop-hero p.lead { color: color-mix(in srgb, var(--default-color), transparent 20%); font-size: 1.05rem; max-width: 560px; margin-bottom: 0; }
+    .shop-hero .hero-stats { display: flex; gap: 32px; margin-top: 32px; }
+    .shop-hero .hero-stats .stat strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent-color); font-family: var(--heading-font); line-height: 1; }
+    .shop-hero .hero-stats .stat span { font-size: 0.8rem; color: color-mix(in srgb, var(--default-color), transparent 35%); }
+    .hero-quality-box { background: var(--surface-color); border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%); border-radius: 16px; padding: 32px 24px; text-align: center; }
+    .hero-quality-box h5 { margin-top: 16px; margin-bottom: 8px; font-size: 1.1rem; }
+    .hero-quality-box p { font-size: 0.87rem; color: color-mix(in srgb, var(--default-color), transparent 25%); margin-bottom: 16px; }
+    .trust-pill { background: color-mix(in srgb, var(--accent-color), transparent 85%); color: var(--accent-color); border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-family: var(--nav-font); font-weight: 600; display: inline-block; }
+
+    /* Filter Tabs */
+    .shop-filters { padding: 40px 0 20px; }
+    .filter-tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .filter-tab { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 30px; font-family: var(--nav-font); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%); background: transparent; color: var(--default-color); }
+    .filter-tab:hover, .filter-tab.active { background: var(--accent-color); border-color: var(--accent-color); color: #fff; }
+    .filter-tab .tab-count { background: rgba(255,255,255,0.15); color: inherit; font-size: 11px; padding: 2px 7px; border-radius: 10px; font-weight: 700; }
+
+    /* Results info */
+    .shop-products { padding: 20px 0 80px; }
+    .results-info { font-size: 0.9rem; color: color-mix(in srgb, var(--default-color), transparent 40%); font-family: var(--nav-font); margin-bottom: 24px; }
+    .results-info strong { color: var(--accent-color); }
+
+    /* Product Card */
+    .product-card { background: var(--surface-color); border-radius: 14px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(19,135,193,0.2); border-color: color-mix(in srgb, var(--accent-color), transparent 40%); }
+    .product-card.featured { border-color: var(--accent-color); box-shadow: 0 0 0 1px var(--accent-color), 0 10px 40px rgba(19,135,193,0.15); }
+
+    /* Product Image — full fill */
+    .product-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      display: block;
+    }
+    .product-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-image img { transform: scale(1.04); }
+
+    /* Placeholder */
+    .img-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 180px; }
+    .img-placeholder i { font-size: 3rem; color: var(--accent-color); opacity: 0.6; }
+    .img-placeholder span { font-size: 0.78rem; font-family: var(--nav-font); color: color-mix(in srgb, var(--default-color), transparent 50%); }
+
+    /* Badges */
+    .platform-badge { position: absolute; top: 12px; left: 12px; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; font-family: var(--nav-font); letter-spacing: 0.5px; text-transform: uppercase; }
+    .badge-html { background: #e44d26; color: #fff; }
+    .badge-wordpress { background: #21759b; color: #fff; }
+    .badge-shopify { background: #5a8a2a; color: #fff; }
+    .featured-ribbon { position: absolute; top: 0; right: 0; background: var(--accent-color); color: #fff; font-size: 10px; font-weight: 700; font-family: var(--nav-font); letter-spacing: 0.5px; padding: 6px 14px 6px 20px; clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); text-transform: uppercase; }
+    .preview-btn { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(0,0,0,0.55); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; opacity: 0; transition: opacity 0.3s ease; text-decoration: none; }
+    .product-card:hover .preview-btn { opacity: 1; }
+
+    /* Product Body */
+    .product-body { padding: 20px 22px; flex: 1; display: flex; flex-direction: column; }
+    .product-title { font-size: 1.05rem; font-weight: 700; color: var(--heading-color); font-family: var(--heading-font); margin-bottom: 8px; }
+    .product-desc { font-size: 0.87rem; color: color-mix(in srgb, var(--default-color), transparent 25%); line-height: 1.65; margin-bottom: 14px; flex: 1; }
+    .product-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .product-tags span { font-size: 11px; background: color-mix(in srgb, var(--accent-color), transparent 85%); color: var(--accent-color); border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%); padding: 3px 10px; border-radius: 12px; font-family: var(--nav-font); font-weight: 500; }
+
+    /* Product Footer */
+    .product-footer { padding: 16px 22px 22px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 88%); margin-top: 16px; }
+    .product-price .price-amount { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent-color); font-family: var(--heading-font); line-height: 1; }
+    .product-price .price-label { font-size: 0.72rem; color: color-mix(in srgb, var(--default-color), transparent 45%); font-family: var(--nav-font); }
+    .btn-buy { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-color); color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: var(--nav-font); text-decoration: none; transition: all 0.3s ease; white-space: nowrap; }
+    .btn-buy:hover { background: color-mix(in srgb, var(--accent-color), #000 15%); transform: translateY(-2px); }
+
+    /* Why Buy */
+    .why-buy { padding: 80px 0; }
+    .why-card { background: var(--surface-color); border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%); border-radius: 12px; padding: 28px 24px; text-align: center; height: 100%; transition: border-color 0.3s; }
+    .why-card:hover { border-color: color-mix(in srgb, var(--accent-color), transparent 40%); }
+    .why-icon { width: 56px; height: 56px; background: color-mix(in srgb, var(--accent-color), transparent 85%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; color: var(--accent-color); }
+    .why-card h5 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+    .why-card p { font-size: 0.87rem; color: color-mix(in srgb, var(--default-color), transparent 25%); margin-bottom: 0; line-height: 1.65; }
+
+    /* CTA */
+    .shop-cta {
+      padding: 100px 0;
+      background: var(--background-color);
+      position: relative;
+      overflow: hidden;
+    }
+    .shop-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, color-mix(in srgb, var(--accent-color), transparent 78%) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .shop-cta-inner {
+      position: relative;
+      background: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
+      border-radius: 20px;
+      padding: 60px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .shop-cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: color-mix(in srgb, var(--accent-color), transparent 85%);
+      color: var(--accent-color);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--nav-font);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+    .shop-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .shop-cta h2 .highlight { color: var(--accent-color); }
+    .shop-cta p {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .shop-cta .btn.btn-primary {
+      background: var(--accent-color);
+      color: #fff;
+      border: 2px solid var(--accent-color);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--nav-font);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .shop-cta .btn.btn-primary:hover {
+      background: color-mix(in srgb, var(--accent-color), #000 15%);
+      border-color: color-mix(in srgb, var(--accent-color), #000 15%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(19, 135, 193, 0.35);
+    }
+    .shop-cta .btn.btn-outline {
+      background: transparent;
+      color: var(--default-color);
+      border: 2px solid color-mix(in srgb, var(--default-color), transparent 55%);
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--nav-font);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .shop-cta .btn.btn-outline:hover {
+      background: color-mix(in srgb, var(--default-color), transparent 88%);
+      border-color: var(--default-color);
+      color: var(--heading-color);
+      transform: translateY(-2px);
+    }
+    .shop-cta-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+    .shop-cta-perks .perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      font-family: var(--nav-font);
+    }
+    .shop-cta-perks .perk i { color: var(--accent-color); font-size: 1rem; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .shop-hero .hero-stats { gap: 20px; }
+      .shop-hero .hero-stats .stat strong { font-size: 1.3rem; }
+      .product-footer { flex-direction: column; align-items: flex-start; }
+      .btn-buy { width: 100%; justify-content: center; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9QMMY721F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T9QMMY721F');
+  </script>
+</head>
+<body class="shop-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="package.html">Packages</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://www.instagram.com/codebyzhang/" class="instagram instagram-work" target="_blank" rel="noopener noreferrer" title="Work Instagram"><i class="bi bi-instagram"></i><span class="ig-label">Work</span></a>
+        <a href="https://www.instagram.com/zhang_tianfa/" class="instagram instagram-developer" target="_blank" rel="noopener noreferrer" title="Developer Instagram"><i class="bi bi-code-slash"></i><span class="ig-label">Dev</span></a>
+        <a href="https://www.linkedin.com/in/kaung-htet-win-zhang-53a517249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bq4iIfSgUTraW%2FuZUk8EYVA%3D%3D" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+  <!-- /Header -->
+
+  <main class="main">
+
+    <!-- ======= Shop Hero ======= -->
+    <section class="shop-hero">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+
+          <div class="col-lg-7" data-aos="fade-up">
+            <div class="hero-badge">
+              <i class="bi bi-bag-heart-fill"></i> Template Shop
+            </div>
+            <h1>Premium <span class="highlight">Web Templates</span><br>Built for Results</h1>
+            <p class="lead">Production-ready HTML, WordPress & Shopify templates crafted by a full-stack developer with 80+ real-world projects. Clean code, fully documented, lifetime updates.</p>
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>8+</strong>
+                <span>Templates</span>
+              </div>
+              <div class="stat">
+                <strong>3</strong>
+                <span>Platforms</span>
+              </div>
+              <div class="stat">
+                <strong>100%</strong>
+                <span>Clean Code</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-quality-box">
+              <i class="bi bi-patch-check-fill" style="font-size: 3rem; color: var(--accent-color);"></i>
+              <h5>Developer-Built Quality</h5>
+              <p>Every template is built from scratch using real-world development standards — not recycled themes.</p>
+              <div class="d-flex flex-wrap gap-2 justify-content-center">
+                <span class="trust-pill"><i class="bi bi-lightning-charge me-1"></i>Fast Performance</span>
+                <span class="trust-pill"><i class="bi bi-phone me-1"></i>Mobile-First</span>
+                <span class="trust-pill"><i class="bi bi-file-earmark-text me-1"></i>Documented</span>
+                <span class="trust-pill"><i class="bi bi-arrow-repeat me-1"></i>Lifetime Updates</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Shop Hero -->
+
+    <!-- ======= Filter Tabs ======= -->
+    <section class="shop-filters">
+      <div class="container">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">
+            <i class="bi bi-grid-3x3-gap"></i> All Templates
+            <span class="tab-count">1</span>
+          </button>
+          <button class="filter-tab" data-filter="html">
+            <i class="bi bi-filetype-html"></i> HTML / CSS
+            <span class="tab-count">1</span>
+          </button>
+          <button class="filter-tab" data-filter="wordpress">
+            <i class="bi bi-wordpress"></i> WordPress
+            <span class="tab-count">0</span>
+          </button>
+          <button class="filter-tab" data-filter="shopify">
+            <i class="bi bi-bag"></i> Shopify
+            <span class="tab-count">0</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- /Filter Tabs -->
+
+    <!-- ======= Products Grid ======= -->
+    <section class="shop-products">
+      <div class="container">
+
+        <p class="results-info">Showing <strong id="visibleCount">1</strong> templates</p>
+
+        <div class="row g-4" id="productsGrid">
+
+          <!-- ——— HTML TEMPLATES ——— -->
+
+          <!-- Product: Developer Portfolio Pro -->
+          <div class="col-lg-4 col-md-6 product-item" data-category="html" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card featured">
+              <div class="product-image">
+                <img src="assets/shop/riseweb.webp" alt="RiseWeb — Premium Agency HTML Template">
+                <span class="platform-badge badge-html">HTML</span>
+                <div class="featured-ribbon">Best Seller</div>
+                <!-- Replace # with your live preview URL -->
+                <a href="https://zhangtianfa.gumroad.com/l/iipvrg" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">RiseWeb — Premium Agency HTML Template</h3>
+                <p class="product-desc">RiseWeb is a premium, production-ready HTML agency template built for studios, freelancers, and digital agencies who want to make a powerful first impression.</p>
+                <div class="product-tags">
+                  <span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span><span>JavaScript</span><span>Dark Theme</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$20</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <!-- Replace # with your Gumroad / store purchase URL -->
+                <a href="https://zhangtianfa.gumroad.com/l/iipvrg" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product: Agency Landing Page -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="html" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-building"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-html">HTML</span>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Agency Landing Page</h3>
+                <p class="product-desc">Modern agency / studio landing page with hero, services grid, client logos, team cards, testimonials, and a multi-step inquiry form. Bootstrap 5 powered.</p>
+                <div class="product-tags">
+                  <span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span><span>Vanilla JS</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$39</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ——— WORDPRESS THEMES ——— -->
+
+          <!-- Product: Business WordPress (ACF) Theme -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="wordpress" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card featured">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-wordpress"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-wordpress">WordPress</span>
+                <div class="featured-ribbon">Popular</div>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Business WordPress (ACF) Theme</h3>
+                <p class="product-desc">Enterprise-grade WordPress theme with ACF integration, custom post types, WPML-ready multilingual support, WooCommerce compatible, and full admin panel.</p>
+                <div class="product-tags">
+                  <span>WordPress</span><span>ACF</span><span>WooCommerce</span><span>WPML</span><span>PHP 8</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$79</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product: Creative Portfolio WordPress Theme -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="wordpress" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-images"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-wordpress">WordPress</span>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Creative Portfolio WordPress Theme</h3>
+                <p class="product-desc">Minimal dark portfolio theme for creatives and agencies. Filterable project grid, case study page template, testimonials CPT, and Contact Form 7 ready.</p>
+                <div class="product-tags">
+                  <span>WordPress</span><span>ACF</span><span>Portfolio CPT</span><span>Dark Theme</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$59</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product: Restaurant & Café WordPress Theme -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="wordpress" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-cup-hot"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-wordpress">WordPress</span>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Restaurant & Café WordPress Theme</h3>
+                <p class="product-desc">Complete restaurant theme with online reservation system, ACF-powered menu management, gallery section, Google Maps integration, and delivery-ready layout.</p>
+                <div class="product-tags">
+                  <span>WordPress</span><span>ACF</span><span>Restaurant</span><span>Booking</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$69</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- ——— SHOPIFY THEMES ——— -->
+
+          <!-- Product: Health & Supplements Shopify Theme -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="shopify" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card featured">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-heart-pulse"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-shopify">Shopify</span>
+                <div class="featured-ribbon">Top Pick</div>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Health & Supplements Shopify Theme</h3>
+                <p class="product-desc">High-converting Shopify theme for health, fitness, and supplement brands. Trust badges, ingredient spotlights, before/after sliders, and upsell widgets built in.</p>
+                <div class="product-tags">
+                  <span>Shopify</span><span>Liquid</span><span>E-commerce</span><span>CRO</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$89</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Product: Fashion & Apparel Shopify Theme -->
+          <!-- <div class="col-lg-4 col-md-6 product-item" data-category="shopify" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card">
+              <div class="product-image">
+                <div class="img-placeholder">
+                  <i class="bi bi-handbag"></i>
+                  <span>Preview coming soon</span>
+                </div>
+                <span class="platform-badge badge-shopify">Shopify</span>
+                <a href="#" class="preview-btn" title="Live Preview" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Fashion & Apparel Shopify Theme</h3>
+                <p class="product-desc">Modern fashion Shopify theme with full-width hero, lookbook section, size guide drawer, quick-add cart, wishlist support, and Instagram feed integration.</p>
+                <div class="product-tags">
+                  <span>Shopify</span><span>Liquid</span><span>Fashion</span><span>Lookbook</span>
+                </div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="price-amount">$79</span>
+                  <span class="price-label">One-time purchase</span>
+                </div>
+                <a href="#" class="btn-buy" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-bag-plus"></i> Buy Now
+                </a>
+              </div>
+            </div>
+          </div> -->
+
+        </div><!-- /productsGrid -->
+      </div>
+    </section>
+    <!-- /Products Grid -->
+
+    <!-- ======= Why Buy Section ======= -->
+    <section class="why-buy dark-background">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Why Buy From Me?</h2>
+          <p>Templates built by a developer who has shipped 80+ real-world projects — not just for show.</p>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-code-slash"></i></div>
+              <h5>Clean, Commented Code</h5>
+              <p>Every template follows semantic HTML and best-practice CSS. Easy to understand, extend, and hand off to any developer.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h5>Performance-First</h5>
+              <p>Built with Core Web Vitals in mind. Optimized images, deferred scripts, and lean CSS for fast load times out of the box.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-file-earmark-text"></i></div>
+              <h5>Full Documentation</h5>
+              <p>Each template comes with detailed setup docs, folder structure guide, and customization notes so you are never lost.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="why-card">
+              <div class="why-icon"><i class="bi bi-headset"></i></div>
+              <h5>Direct Developer Support</h5>
+              <p>Stuck on something? You're buying directly from the developer. Get real, direct support — not a ticket to a help desk.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Why Buy Section -->
+
+    <!-- ======= CTA Section ======= -->
+    <section class="shop-cta text-center">
+      <div class="container" data-aos="fade-up">
+        <div class="shop-cta-inner">
+
+          <div class="shop-cta-badge">
+            <i class="bi bi-stars"></i> Let's Build Something Great
+          </div>
+
+          <h2>Don't See What<br>You Need? <span class="highlight">Let's Talk.</span></h2>
+          <p>I build fully custom templates and websites tailored to your brand, your audience, and your business goals — with clean code and real developer support throughout.</p>
+
+          <div class="d-flex gap-3 flex-wrap justify-content-center">
+            <a href="contact.html#quote" class="btn btn-primary">
+              <i class="bi bi-chat-dots"></i> Request Custom Build
+            </a>
+            <a href="portfolio.html" class="btn btn-outline">
+              <i class="bi bi-grid-3x3-gap"></i> View My Work
+            </a>
+          </div>
+
+          <div class="shop-cta-perks">
+            <span class="perk"><i class="bi bi-check-circle-fill"></i> Response within 24 hours</span>
+            <span class="perk"><i class="bi bi-check-circle-fill"></i> Free initial consultation</span>
+            <span class="perk"><i class="bi bi-check-circle-fill"></i> Tailored proposal & timeline</span>
+            <span class="perk"><i class="bi bi-check-circle-fill"></i> 80+ projects delivered</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /CTA Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>2026 © <strong class="px-1 sitename">Kaung Htet Win @ Zhang</strong></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.instagram.com/codebyzhang/" class="instagram instagram-work" target="_blank" rel="noopener noreferrer" title="@codebyzhang (Work)"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/zhang_tianfa/" class="instagram instagram-developer" target="_blank" rel="noopener noreferrer" title="@zhang_tianfa (Developer)"><i class="bi bi-code-slash"></i></a>
+        <a href="https://www.linkedin.com/in/kaung-htet-win-zhang-53a517249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bq4iIfSgUTraW%2FuZUk8EYVA%3D%3D" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Shop Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.filter-tab');
+      const items = document.querySelectorAll('.product-item');
+      const counter = document.getElementById('visibleCount');
+
+      function refreshCount() {
+        let n = 0;
+        items.forEach(item => { if (item.style.display !== 'none') n++; });
+        counter.textContent = n;
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const filter = this.dataset.filter;
+
+          tabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+
+          items.forEach(item => {
+            item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+          });
+
+          refreshCount();
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
